@@ -11,7 +11,7 @@
 
 <script>
 import indexView from "../src/views/auth/indexView.vue";
-import dec from "./components/decView.vue";
+import dec from "./components/decView.vue"; 
 export default {
     components: {
         indexView,
