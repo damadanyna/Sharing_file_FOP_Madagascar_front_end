@@ -7,6 +7,12 @@
     <div class="  flex flex-row mt-5 items-center">
         <router-link class=" mx-2 flex-row items-center text-xs font-medium sm:text-base lg:flex-row flex  my-2 text-gray-400" to="/"> 
                 <div class="flex flex-col jutify-center text-center">
+                <i class="fas fa-house"></i>
+                <span class="text-[9px] font-normal">accueil</span>   
+           </div>  
+        </router-link> 
+        <router-link class=" mx-2 flex-row items-center text-xs font-medium sm:text-base lg:flex-row flex  my-2 text-gray-400" to="/organigramme"> 
+                <div class="flex flex-col jutify-center text-center">
                 <i class="fas fa-users text-xl"></i>
                 <span class="text-[9px] font-normal">organigram</span>   
            </div>  
