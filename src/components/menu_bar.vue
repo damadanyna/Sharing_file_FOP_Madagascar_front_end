@@ -5,19 +5,30 @@
     </div>
 
     <div class="  flex flex-row mt-5 items-center">
-        <router-link class=" mx-2 flex-row items-center text-xs font-medium sm:text-base lg:flex-row flex  my-2 text-gray-400" to="/home"> 
-          <span>Organigram</span>
+        <router-link class=" mx-2 flex-row items-center text-xs font-medium sm:text-base lg:flex-row flex  my-2 text-gray-400" to="/"> 
+                <div class="flex flex-col jutify-center text-center">
+                <i class="fas fa-users text-xl"></i>
+                <span class="text-[9px] font-normal">organigram</span>   
+           </div>  
         </router-link> 
-        <router-link class=" mx-2 flex-row items-center text-xs font-medium sm:text-base lg:flex-row flex  my-2 text-gray-400" to="/reservation"> 
-            <span>messages</span>
+        <router-link class=" mx-2 flex-row items-center text-xs font-medium sm:text-base lg:flex-row flex  my-2 text-gray-400" to="/message"> 
+            <div class="flex flex-col jutify-center text-center">
+                <i class="fas fa-message text-xl"></i>
+                <span class="text-[9px] font-normal">message</span>   
+           </div>  
          </router-link> 
-        <router-link   @click="$store.state.params=null"  class=" mx-2 flex-row items-center text-xs font-medium sm:text-base lg:flex-row flex  my-2 text-gray-400" to="/client"> 
-            <span>notification</span>
+        <router-link   @click="$store.state.params=null"  class=" mx-2 items-center text-xs font-medium sm:text-base lg:flex-row flex  my-2 text-gray-400" to="/client"> 
+           <div class="flex flex-col jutify-center text-center">
+                <i class="fas fa-bell text-xl"></i>
+                <span class="text-[9px] font-normal">notification</span>   
+           </div>
        </router-link> 
        
-        <div @click="this.$store.state.decView=false" class="  px-4 py-1 hover:scale-125 transform group cursor-pointer" title=" Deconnectez ?">
-            <svg class=" w-7" viewBox="0 0 24 24">
-                <path class=" fill-current  " :class="this.$store.state.is_dark?'text-white group-hover:text-red-600':'text-gray-700 group-hover:text-red-600'" d="m16.56 5.44-1.45 1.45A5.969 5.969 0 0 1 18 12a6 6 0 0 1-6 6 6 6 0 0 1-6-6c0-2.17 1.16-4.06 2.88-5.12L7.44 5.44A7.961 7.961 0 0 0 4 12a8 8 0 0 0 8 8 8 8 0 0 0 8-8c0-2.72-1.36-5.12-3.44-6.56M13 3h-2v10h2" /></svg>
+        <div @click="this.$store.state.decView=false" class="  text-gray-400 px-4 py-1 hover:scale-125 transform group cursor-pointer" title=" Deconnectez ?">
+          <div :class="this.$store.state.is_dark?'  group-hover:text-red-600':'text-gray-700 group-hover:text-red-600'" class="flex flex-col jutify-center text-center">
+                <i class="fas fa-power-off text-xl"></i>
+                <span class="text-[9px] mt-2 font-normal">Quitter</span>   
+           </div>
         </div>
     </div>
   </nav>
@@ -31,19 +42,23 @@ export default {
 }
 </script>
 
-<style scoped>
+<style >
 
-nav a.router-link-exact-active {
-  rowor: #ffffff;
-  font-weight: bold;
+body{transition: none;}
+
+nav a.router-link-exact-active { 
+  /* font-weight: bold; */
+  color: white;
+
 }
 nav a.router-link-exact-active path  {
-  fill: #ffffff;
+  /* fill: #ffffff; */
 
   
 }
 nav .router-link-exact-active{
-  transform: translateX(25px);
-  
+  /* transform: translateX(25px); */
+  background: transparent;
+  border: none;
 }
 </style>

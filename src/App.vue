@@ -1,9 +1,10 @@
 <template>
-<div class="h-full w-full">
+<div class="h-[100vh] w-full">
     <dec></dec>
     <!-- <notif></notif> -->
     <indexView v-if="!this.$store.state.data.user.util_status == 1"></indexView>
-    <div v-else class="px-3 h-full w-full" :class="this.$store.state.is_dark ? 'bg-gray' : 'bg-gray-200'">
+    <div v-else class="px-3 h-[100vh] w-full" :class="this.$store.state.is_dark ? 'bg-gray' : 'bg-gray-200'">
+        <menu_barVue></menu_barVue>
         <router-view class="h-full w-full" />
     </div>
 </div>
@@ -12,10 +13,11 @@
 <script>
 import indexView from "../src/views/auth/indexView.vue";
 import dec from "./components/decView.vue"; 
+import menu_barVue from './components/menu_bar.vue';
 export default {
     components: {
         indexView,
-        dec,
+        dec,menu_barVue
     },
     data() {
         return {
@@ -78,27 +80,27 @@ export default {
         }
     },
     mounted() {
-        this.getStatus();
-        this.verify_conge();
+        // this.getStatus();
+        // this.verify_conge();
 
-        setTimeout(() => {
-            this.$store.state.all_conge.forEach(element => {
-                if (element.im_emp, this.restDate(this.endDate(element.conge_date_enreg, element.nbr_jour)) <= 0) {
-                    console.log(element.id_conge, this.restDate(this.endDate(element.conge_date_enreg, element.nbr_jour)));
+        // setTimeout(() => {
+        //     this.$store.state.all_conge.forEach(element => {
+        //         if (element.im_emp, this.restDate(this.endDate(element.conge_date_enreg, element.nbr_jour)) <= 0) {
+        //             console.log(element.id_conge, this.restDate(this.endDate(element.conge_date_enreg, element.nbr_jour)));
 
-                    this.$store.commit('update', this.array = {
-                        url: 'api/congeUp',
-                        id_conge: element.id_conge,
-                        etat_conge: 0,
-                    });
-                }
-            });
-        }, 200);
+        //             this.$store.commit('update', this.array = {
+        //                 url: 'api/congeUp',
+        //                 id_conge: element.id_conge,
+        //                 etat_conge: 0,
+        //             });
+        //         }
+        //     });
+        // }, 200);
 
-        this.$store.commit('getDash', this.array = {
-            url: 'api/dashboard',
-            date_: this.date_,
-        });
+        // this.$store.commit('getDash', this.array = {
+        //     url: 'api/dashboard',
+        //     date_: this.date_,
+        // });
 
     },
     create() {
