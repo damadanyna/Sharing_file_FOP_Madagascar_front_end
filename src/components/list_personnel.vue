@@ -1,5 +1,5 @@
 <template>
-    <div class=" md:w-[40vw] z-50 w-[40vw] sm:w-[70vw] bg-white px-3 py-2 rounded-lg">
+    <div class=" md:w-[40vw] z-50 w-[80vw]  sm:w-[70vw] bg-white px-3 py-2 rounded-lg">
         <div class=" border py-3 mt-10 px-3 rounded-full border-stone-400 items-center flex "> 
             <input type="text" placeholder=" Recherche" class=" w-full outline-none">
             <i class="fas fa-magnifying-glass text-xl text-indigo-600"></i>

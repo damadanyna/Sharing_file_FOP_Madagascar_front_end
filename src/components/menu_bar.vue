@@ -1,5 +1,5 @@
 <template>
-  <nav class=" w-full flex flex-row justify-between bg-transparent  px-4 py-4">
+  <nav class=" w-full flex flex-row justify-between bg-transparent  sm:px-4 py-4">
     <div class=" flex-row items-center text-xs font-medium sm:text-base lg:flex-row   flex justify-center border-b border-gray-500 py-3 "> 
       <span class=" ml-4 font-bold text-white uppercase  text-center "> LOGO</span>
     </div>

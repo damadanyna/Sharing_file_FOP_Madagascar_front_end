@@ -9,7 +9,7 @@ import axios from 'axios'
 //configuration axios
 
 //'http://192.168.88.254:4044' //Sur serveur
-axios.defaults.baseURL = 'http://localhost:4044' //'http://localhost:4044'
+axios.defaults.baseURL = 'http://192.168.43.88:4044' //'http://localhost:4044'
 
 
 const app=createApp(App)

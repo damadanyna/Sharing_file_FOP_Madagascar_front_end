@@ -4,7 +4,7 @@
             <div class="flex-col flex mb-32">
                 <input type="file" id="file" name=" file" class=" hidden">
                 <label for="file" class=" border border-dashed border-stone-300 px-9 py-7">
-                    <span class=" text-white text-4xl">
+                    <span class=" text-white text-lg sm:text-4xl">
                     Chercher le fichier à partager</span>
                 </label>
                 <div class="flex"> 
