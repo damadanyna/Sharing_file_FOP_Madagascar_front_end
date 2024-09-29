@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import list_personnel from '@/components/list_personnel.vue'
 export default {
     components: {
@@ -48,16 +49,16 @@ export default {
         },
         async uploadFile() {
             const formData = new FormData();
-            formData.append('file', this.selectedFile); // Ajouter le fichier à l'objet FormData
-
+            formData.append('file', this.selectedFile);
             try {
-                const response = await axios.post('http://192.168.0.112:4044/api/upload', formData, {
+                const response = await axios.post('api/upload', formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data'
                     }
                 });
 
                 console.log(response.data); // Gérer la réponse
+                console.log(response); // Gérer la réponse
             } catch (error) {
                 console.error('Erreur lors du téléversement:', error);
             }
